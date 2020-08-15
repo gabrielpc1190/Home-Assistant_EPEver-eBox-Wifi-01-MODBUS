@@ -3,6 +3,7 @@ How to extract data from the EPEver TRACER-AN using the eBox-Wifi-01 with Home A
 + Make sure you're able to connect your eBox-Wifi-01 to your WiFi network, so your Home Assistant can reach it!
 + Follow my quick guide here: https://github.com/gabrielpc1190/eBox-Wifi-01-hacks
 + Some of the registers that worked came from this PDF: http://www.solar-elektro.cz/data/dokumenty/1733_modbus_protocol.pdf
++ More info on registers available: https://files.i4wifi.cz/inc/_doc/attach/StoItem/7068/MODBUS-Protocol-v25.pdf
 
 # modbus integration section on configuration.yaml
 ```
