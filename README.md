@@ -1,5 +1,5 @@
 # Home-Assistant_EPEver-eBox-Wifi-01-MODBUS
-How to extract data from the EPEver TRACER-AN using the eBox-Wifi-01 with Home Assistant
+How to extract data from the EPEver TRACER-AN using the eBox-Wifi-01 with Home Assistant.
 Make sure you're able to connect your eBox-Wifi-01 to your WiFi network, so your Home Assistant can reach it!
 Follow my quick guide here: https://github.com/gabrielpc1190/eBox-Wifi-01-hacks
 
@@ -81,4 +81,62 @@ modbus:
       slave: 01
       register: 12570
       register_type: input
+```
+# More registers for future testing:
+```
+            #modbus:
+            #  - type: tcp
+            #    host: 172.16.10.98
+            #    port: 8088
+            #    name: hub1
+            #  - platform: modbus
+            #    registers:
+            #      - name: PV array rated voltage 
+            #        hub: hub1
+            #        unit_of_measurement: V
+            #        slave: 01
+            #        register: 0x3000 #need to be converted from hex to decimal
+            #        register_type: input
+            
+            #      - name: PV array rated current 
+            #        hub: hub1
+            #        unit_of_measurement: A
+            #        slave: 01
+            #        register: 0x3001 #need to be converted from hex to decimal
+            #        register_type: input
+            
+            #      - name: PV array rated power (low 16 bits)
+            #        hub: hub1
+            #        unit_of_measurement: W
+            #        slave: 01
+            #        register: 0x3002 #need to be converted from hex to decimal
+            #        register_type: input
+            
+            #      - name: PV array rated power (high 16 bits)
+            #        hub: hub1
+            #        unit_of_measurement: W
+            #        slave: 01
+            #        register: 0x3003 #need to be converted from hex to decimal
+            #        register_type: input
+            
+            #      - name: Bank 1 Voltage
+            #        hub: hub1
+            #        unit_of_measurement: V
+            #        slave: 01
+            #        register: 0x3004 #need to be converted from hex to decimal
+            #        register_type: output
+            
+            #      - name: Rated charging current to battery 
+            #        hub: hub1
+            #        unit_of_measurement: A
+            #        slave: 01
+            #       register: 0x3005 #need to be converted from hex to decimal
+            #        register_type: output
+            
+            #      - name: Rated charging power to battery 
+            #        hub: hub1
+            #        unit_of_measurement: W
+            #        slave: 01
+            #        register: 0x3006 #need to be converted from hex to decimal
+            #        register_type: output
 ```
